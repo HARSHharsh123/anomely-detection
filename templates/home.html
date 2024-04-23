@@ -1,0 +1,27 @@
+html>
+<body>
+    <div class="login">
+       <h1> Intruction Detection Prediction </h1>
+   
+        <!-- Main Input For Receiving Query to our ML -->
+       <form action="{{ url_for('prediction')}}" method="post">
+         <input type="text" name="protocol_type" placeholder="protocol_type" required="required" /><br>
+           <input type="text" name="service" placeholder="service" required="required" /><br>
+           <input type="text" name="flag" placeholder="flag" required="required" /><br>
+           <input type="text" name="src_bytes" placeholder="src_bytes" required="required" /><br>
+           <input type="text" name="dst_bytes" placeholder="dst_bytes" required="required" /><br>
+           <input type="text" name="count" placeholder="count" required="required" /><br>
+           <input type="text" name="same_srv_rate" placeholder="same_srv_rate" required="required" /><br>
+           <input type="text" name="diff_srv_rate" placeholder="diff_srv_rate" required="required" /><br>
+           <input type="text" name="dst_host_srv_count" placeholder="dst_host_srv_count" required="required" /><br>
+           <input type="text" name="dst_host_same_srv_rate" placeholder="dst_host_same_srv_rate" required="required" /><br>
+   
+   
+   
+           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+    <h2>
+       Intruction Detection :  {{result}}
+    </h2>
+   <body>
+</html>
